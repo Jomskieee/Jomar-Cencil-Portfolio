@@ -1,4 +1,12 @@
-PORTFOLIO FOLDER - Jomar Samuel Cencil
+PORTFOLIO FOLDER - Jomar Samuel Cencil (version 3)
+
+CHANGED IN VERSION 3: style.css (phone fix), index.html (re-checked)
+- Phone fix: the page no longer scrolls sideways on phones (360 to 414 px wide)
+
+CHANGED IN VERSION 2: index.html, style.css, script.js
+- View CV opens in a window in the centre of the screen (phones open it in a new tab)
+- Big bold headings (Poppins font) for the home page and the About me quote
+- Formspree form ID already set in index.html (xvkkldnp)
 
 FILES
 index.html            page content (Home, About me, Education, Projects, Skills, Certification, Contact)

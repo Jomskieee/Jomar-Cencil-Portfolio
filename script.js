@@ -64,3 +64,20 @@ document.getElementById('yr').textContent=new Date().getFullYear();
     }).catch(function(){say('Sorry, the message could not be sent. Please email me directly.','err')}).then(function(){btn.disabled=false});
   });
 })();
+
+/* View CV in a window in the centre of the screen (phones open it in a new tab instead) */
+(function(){
+  var modalEl=document.getElementById('cvModal'),frame=document.getElementById('cvFrame');
+  if(!modalEl||!frame||!window.bootstrap)return;
+  var modal=bootstrap.Modal.getOrCreateInstance(modalEl);
+  document.querySelectorAll('.js-viewcv').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var canInline=navigator.pdfViewerEnabled!==false&&window.innerWidth>=768;
+      if(!canInline)return;
+      e.preventDefault();
+      frame.src=a.href+'#view=FitH';
+      modal.show();
+    });
+  });
+  modalEl.addEventListener('hidden.bs.modal',function(){frame.src='about:blank'});
+})();
